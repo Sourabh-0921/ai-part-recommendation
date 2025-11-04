@@ -1,0 +1,60 @@
+name: ai-parts-recommendation
+channels:
+  - conda-forge
+  - defaults
+dependencies:
+  # Python
+    # Python (updated for Apache Airflow compatibility)
+  - python=3.10
+  
+  # Core ML and Data Science
+  - pandas>=1.5.0
+  - numpy>=1.21.0
+  - scikit-learn>=1.1.0
+  - lightgbm>=3.3.0
+  - scipy>=1.9.0
+  
+  # API Framework
+  - fastapi>=0.95.0
+  - uvicorn>=0.20.0
+  - pydantic>=2.0.0
+  
+  # Database
+  - sqlalchemy>=1.4.0
+  - psycopg2>=2.9.0
+  - alembic>=1.8.0
+  
+  # Caching and Message Queue
+  - redis-py>=4.3.0
+  - pymongo>=4.2.0
+  
+  # Utilities
+  - python-dotenv>=0.19.0
+  - tenacity>=8.0.0
+  - requests>=2.28.0
+  
+  # Development Dependencies
+  - pytest>=7.0.0
+  - pytest-asyncio>=0.20.0
+  - pytest-cov>=4.0.0
+  - black>=22.0.0
+  - flake8>=5.0.0
+  - mypy>=0.991
+  - jupyter>=1.0.0
+  - ipykernel>=6.0.0
+  
+  # Jupyter and Documentation
+  - jupyterlab>=3.4.0
+  - notebook>=6.4.0
+  - sphinx>=5.0.0
+  - sphinx-rtd-theme>=1.0.0
+  
+  # Pip dependencies (for packages not available in conda)
+  - pip
+  - pip:
+    - mlflow>=2.0.0
+    - asyncio-mqtt>=0.11.0
+    - python-multipart>=0.0.5
+    - apache-airflow>=2.5.0
+    - prometheus-client>=0.15.0
+    - pydantic-settings>=2.0.0
