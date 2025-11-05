@@ -1,4 +1,44 @@
-/* Better responsive design */
+/* Dynamic responsive design for all screen sizes */
+
+/* Base content styling - dynamic width */
+.wy-nav-content {
+    padding: 1.618em 2em;
+    height: 100%;
+    max-width: 90vw; /* 90% of viewport width */
+    min-width: 320px; /* Minimum width for very small screens */
+    margin: auto;
+    width: auto;
+}
+
+/* Large desktop screens */
+@media (min-width: 1400px) {
+    .wy-nav-content {
+        max-width: 1200px;
+        padding: 1.618em 3.236em;
+    }
+}
+
+/* Desktop screens */
+@media (min-width: 992px) and (max-width: 1399px) {
+    .wy-nav-content {
+        max-width: 85vw;
+        padding: 1.618em 2.5em;
+    }
+}
+
+/* Tablet screens */
+@media (min-width: 769px) and (max-width: 991px) {
+    .wy-nav-content {
+        max-width: 90vw;
+        padding: 1.618em 2em;
+    }
+    
+    .wy-nav-content-wrap {
+        margin-left: 300px;
+    }
+}
+
+/* Mobile screens */
 @media (max-width: 768px) {
     .wy-nav-side {
         left: -300px;
@@ -9,40 +49,98 @@
     }
     
     .wy-nav-content {
-        padding: 1.618em 1em;
-        max-width: none;
+        padding: 1em 1em;
+        max-width: 95vw;
+        margin: 0 auto;
     }
 }
 
-/* Improve content width and layout on larger screens */
-.wy-nav-content {
-    padding: 1.618em 3.236em;
-    height: 100%;
-    max-width: 1100px;
-    margin: auto;
+/* Very small mobile screens */
+@media (max-width: 480px) {
+    .wy-nav-content {
+        padding: 0.8em 0.5em;
+        max-width: 98vw;
+    }
 }
 
-/* Better table responsiveness */
+/* Dynamic table responsiveness */
+.wy-table-responsive {
+    width: 100%;
+    overflow-x: auto;
+}
+
+.wy-table-responsive table {
+    width: 100%;
+    table-layout: auto;
+    word-wrap: break-word;
+}
+
 .wy-table-responsive table td, 
 .wy-table-responsive table th {
     white-space: normal !important;
     word-wrap: break-word;
+    min-width: 100px;
+    max-width: 300px;
 }
 
-/* Better code block fitting */
+/* Dynamic code block fitting */
 .highlight {
     overflow-x: auto;
     word-wrap: break-word;
+    max-width: 100%;
 }
 
-/* Better image scaling */
+.highlight pre {
+    white-space: pre-wrap;
+    word-wrap: break-word;
+}
+
+/* Dynamic image scaling */
 img {
     max-width: 100%;
     height: auto;
+    width: auto;
 }
 
-/* Fix long text wrapping */
-.wy-table-responsive table {
-    table-layout: fixed;
+/* Dynamic navigation adjustments */
+.wy-nav-side {
+    width: 300px;
+}
+
+@media (min-width: 1400px) {
+    .wy-nav-side {
+        width: 320px;
+    }
+    
+    .wy-nav-content-wrap {
+        margin-left: 320px;
+    }
+}
+
+/* Dynamic content sections */
+.section {
+    margin-bottom: 2em;
+}
+
+/* Dynamic list items */
+.wy-plain-list-disc li,
+.wy-plain-list-decimal li {
+    margin-bottom: 0.5em;
+}
+
+/* Flexible containers */
+.container {
     width: 100%;
+    max-width: none;
+    padding: 0;
+}
+
+/* Dynamic search box */
+.wy-side-nav-search {
+    width: 100%;
+}
+
+.wy-side-nav-search input[type=text] {
+    width: 100%;
+    box-sizing: border-box;
 }
