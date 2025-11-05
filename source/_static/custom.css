@@ -1,0 +1,48 @@
+/* Better responsive design */
+@media (max-width: 768px) {
+    .wy-nav-side {
+        left: -300px;
+    }
+    
+    .wy-nav-content-wrap {
+        margin-left: 0;
+    }
+    
+    .wy-nav-content {
+        padding: 1.618em 1em;
+        max-width: none;
+    }
+}
+
+/* Improve content width and layout on larger screens */
+.wy-nav-content {
+    padding: 1.618em 3.236em;
+    height: 100%;
+    max-width: 1100px;
+    margin: auto;
+}
+
+/* Better table responsiveness */
+.wy-table-responsive table td, 
+.wy-table-responsive table th {
+    white-space: normal !important;
+    word-wrap: break-word;
+}
+
+/* Better code block fitting */
+.highlight {
+    overflow-x: auto;
+    word-wrap: break-word;
+}
+
+/* Better image scaling */
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Fix long text wrapping */
+.wy-table-responsive table {
+    table-layout: fixed;
+    width: 100%;
+}
