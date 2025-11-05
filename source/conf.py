@@ -51,11 +51,37 @@ exclude_patterns = []
 html_theme = 'sphinx_rtd_theme'
 html_static_path = ['_static']
 
+# html_theme_options = {
+#     'navigation_depth': 4,
+#     'collapse_navigation': False,
+#     'sticky_navigation': True,
+# }
+
+
+html_baseurl = 'https://github.com/Sourabh-0921/ai-parts-recommendation/'
+
+# ...existing code...
+
+# Use a responsive theme
+html_theme = 'sphinx_rtd_theme'  # or 'furo' for modern look
+
+# Theme options for better responsiveness
 html_theme_options = {
     'navigation_depth': 4,
     'collapse_navigation': False,
     'sticky_navigation': True,
+    'includehidden': True,
+    'titles_only': False,
+    'style_external_links': True,
 }
 
+# Add viewport meta tag for mobile responsiveness
+html_context = {
+    'display_github': True,
+    'github_user': 'Sourabh-0921',
+    'github_repo': 'ai-part-recommendation',
+    'github_version': 'main',
+    'conf_py_path': '/source/',
+}
 
-html_baseurl = 'https://github.com/Sourabh-0921/ai-parts-recommendation/'
+# ...existing code...
